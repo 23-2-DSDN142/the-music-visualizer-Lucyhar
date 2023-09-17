@@ -1,6 +1,6 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
-function draw_one_frame(words, vocal, drum, bass, other, counter) {
+function draw_one_frame(song, vocal, drum, bass, other, counter) {
   background(20)
   textFont('Helvetica'); // please use CSS safe fonts
   rectMode(CENTER)
@@ -39,5 +39,5 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    // display "words"
    textAlign(CENTER);
    textSize(vocal);
-   text(words, width/2, height/3);
+   text(song, width/2, height/3);
 }
