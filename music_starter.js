@@ -2,7 +2,7 @@
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   // colorMode(HSB, 100);
-  background(255);
+  background(154, 192, 252);
   rectMode(CENTER);
   strokeWeight (9);
 
@@ -34,21 +34,27 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
     for(var i = 1; i <= 5; i++){
       // console.log("ENTERED");
-      let flower_size = 50;
+      let flower_size = 90;
     //basic white flower
 // var flowerMap = map(drum, 0,100, 5,70); //parseInt
 
 push();
-translate(100*i, 130);
+
+
+translate(160*i, 630);
 stroke(9, 105, 9);
 strokeWeight(2);
 
+stroke(9, 105, 9);
+strokeWeight(5);
+line(10,15,10,300);
 
 rotate(-20);
 fill(9, 105, 9); //green
 ellipse(30, 0, 55,15); // leaf4
 rotate(-30);
 ellipse(30, 0, 45,12); // leaf
+
 
 
 stroke(255, 140, 148);
@@ -75,6 +81,7 @@ fill(252, 177, 0); //yellow
 stroke(255, 140, 148);
 strokeWeight(0);
 circle(0, 0,30); // middle
+
 pop();
 
 // if(words>=20){
@@ -117,12 +124,12 @@ pop();
 
     
 
-// textFont('Helvetica'); // please use CSS safe fonts
-  // textSize(24);
+textFont('Georgia'); // please use CSS safe fonts
+  textSize(24);
 
-  //  let bar_spacing = height / 10;
-  //  let bar_height = width / 12;
-  //  let bar_pos_x = width / 2;
+   let bar_spacing = height / 10;
+   let bar_height = width / 12;
+   let bar_pos_x = width / 2;
  
 
   //  // vocal bar is red
@@ -148,12 +155,12 @@ pop();
   //  rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
   //  fill(0);
   //  text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
-  //  fill(255, 255, 0);
+   fill(255, 255, 0);
  
-  //  // display "words"
-  //  textAlign(CENTER);
-  //  textSize(vocal);
-  //  text(words, width/2, height/3);
+   // display "words"
+   textAlign(CENTER);
+   textSize(vocal);
+   text(words, width/2, height/3);
 
 
 
@@ -201,13 +208,13 @@ pop();
 
   
 
-  fill(255)
-  ellipse(width/2, height/2 + 200, 200, 50+vocal)
+  // fill(255)
+  // ellipse(width/2, height/2 + 200, 200, 50+vocal)
 
-  fill('#FFC0CB')
-  ellipse(width/2, height/2 + 200, 120, 20+vocal)
+  // fill('colorVariable')
+  // ellipse(width/2, height/2 + 200, 120, 20+vocal)
 
-    var ballSize = map(bass, 0,50, 40,150);
+    var ballSize = map(bass, 0,50, 40,50);
 
     var drumHight = map(other, -150,100, height,0*ballSize/9);
 
@@ -215,9 +222,45 @@ pop();
     fill(235, 152, 52);
     stroke(255, 140, 148);
     strokeWeight(0);
+    ellipse(width/6, drumHight+10, ballSize);
+    ellipse(width/4.5, drumHight+10, ballSize);
+    ellipse(width/3.5, drumHight+10, ballSize);
+    ellipse(width/2, drumHight+10, ballSize);
+    ellipse(width/1.6, drumHight+10, ballSize);
     ellipse(width/1.5, drumHight+10, ballSize);
+    ellipse(width/1.4, drumHight+10, ballSize);
+    ellipse(width/1.3, drumHight+10, ballSize);
+    ellipse(width/1.2, drumHight+10, ballSize);
+    ellipse(width/1, drumHight+10, ballSize);
+
+
+
+
+
 
    
 
+    // colour changing sun 
+    let colorVariable = 0; // Variable to control the gradient color
 
+  
+  // Map the colorVariable to a gradient between yellow (color(255, 255, 0)) and orange (color(255, 165, 0))
+  let lerpedColor = lerpColor(color(255, 255, 0), color(255, 165, 0), colorVariable);
+
+  fill(lerpedColor);
+  noStroke();
+  
+  // Draw an ellipse in the center of the canvas
+  let diameter = 100;
+  ellipse(width / 2, height / 2, diameter, diameter);
+
+  // Change the color gradually
+  colorVariable += 0.005;
+  if (colorVariable > 1) {
+    colorVariable = 0;
   }
+}
+
+
+
+  
