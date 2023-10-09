@@ -6,11 +6,28 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   rectMode(CENTER);
   strokeWeight (9);
 
+
+// //broken code
+//   var size = 100;
+
+// var xPosArray = [50,300,400,500];
+// // vocal, drum, bass and other volumes
+
+// function draw_one_frame(vocal, drum, bass, other) {
+//   background(0, 0, 100);
+
+
+//   for(var i = 1; i <=4; i++){
+//     sllipse(xPosArray[i],200,size)
+//   }
+
+// }
+
   // console.log(vocal);
 
     //testing loop code
 
-  //storkeFill(255);
+  // storkeFill(255);
 
   // var drumMap = map(drum, 0,100, 5,70); //parseInt
 
@@ -34,7 +51,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
     for(var i = 1; i <= 5; i++){
       // console.log("ENTERED");
-      let flower_size = 90;
+      let flower_size = bass + 50 ;
     //basic white flower
 // var flowerMap = map(drum, 0,100, 5,70); //parseInt
 
@@ -59,20 +76,22 @@ ellipse(30, 0, 45,12); // leaf
 
 stroke(255, 140, 148);
 strokeWeight(0);
-if (flower_size == 90){
+if (flower_size > 65){
 fill(255,255,255)//white
 }
 else {
 fill(157, 105, 240)//purple
 }
 
-ellipse(0, 0, 80,30, 50 + bass); // petal
+rotate(85);
+
+ellipse(0, 0, 25,flower_size, 50 + bass); // petal
 ellipse(0, 0, 25,flower_size,50 + bass); // petal
 
 
-rotate(45);
+rotate(55);
 ellipse(0, 0, 25,flower_size,50 + bass); //petal
-rotate(90);
+rotate(70);
 ellipse(0, 0, 25,flower_size,50 + bass); //petal
 
 fill(252, 177, 0); //yellow
@@ -80,7 +99,7 @@ fill(252, 177, 0); //yellow
 
 stroke(255, 140, 148);
 strokeWeight(0);
-circle(0, 0,30); // middle
+circle(0, 0, other - 20); // middle
 
 pop();
 
@@ -259,8 +278,11 @@ textFont('Georgia'); // please use CSS safe fonts
   if (colorVariable > 1) {
     colorVariable = 0;
   }
+
+
+
+
+  //testing all bits of code
+
+
 }
-
-
-
-  
