@@ -1,10 +1,12 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  // colorMode(HSB, 100);
+  //colorMode(HSB, 100);
   background(154, 192, 252);
   rectMode(CENTER);
   strokeWeight (9);
+
+
 
 
 // //broken code
@@ -282,7 +284,7 @@ textFont('Georgia'); // please use CSS safe fonts
 
 
 
-  //testing all bits of code
 
 
 }
+
