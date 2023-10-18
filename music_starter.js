@@ -6,28 +6,13 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   rectMode(CENTER);
   strokeWeight (9);
 
-
-
-
-// //broken code
-//   var size = 100;
-
-// var xPosArray = [50,300,400,500];
-// // vocal, drum, bass and other volumes
-
-// function draw_one_frame(vocal, drum, bass, other) {
-//   background(0, 0, 100);
-
-
-//   for(var i = 1; i <=4; i++){
-//     sllipse(xPosArray[i],200,size)
-//   }
+console.log(counter);
 
 // }
 
   // console.log(vocal);
 
-    //testing loop code
+  //   testing loop code
 
   // storkeFill(255);
 
@@ -98,10 +83,33 @@ ellipse(0, 0, 25,flower_size,50 + bass); //petal
 
 fill(252, 177, 0); //yellow
 
-
+push();
 stroke(255, 140, 148);
 strokeWeight(0);
-circle(0, 0, other - 20); // middle
+circle(0, 0, 30); // middle
+pop();
+
+
+
+let myYellow = color(255, 255, 0);
+let myOrange = color(255, 165, 0);
+// let myY = color(255, 255, 0);
+// let myO = color(255, 165, 0);
+
+
+// Draw an ellipse in the center of the canvas
+let diameter = 40;
+
+for(let i = bass-30; i <= diameter; i++){
+// Map the colorVariable to a gradient between yellow (color(255, 255, 0)) and orange (color(255, 165, 0))
+let colorVariable = map(i, 0, diameter, 0, 1); // Variable to control the gradient color
+let lerpedColor = lerpColor(myOrange, myYellow, colorVariable);
+// console.log(lerpedColor);
+noFill();
+stroke(lerpedColor);
+strokeWeight(1);
+ellipse(width / 500, height / 650, i, i);
+}
 
 pop();
 
@@ -116,16 +124,46 @@ pop();
 
 
 
-//face moving
+//clouds
 
   
-  // fill(255)
-  // rect(width/3, height/2, 100+ drum, 100  +drum)
-  // rect(width/3*2, height/2, 100+ drum, 100  +drum)
+  fill(255)
+  push();
+  translate (400,50);
+  ellipse(width/4, height/3 + 100, 100, 50+bass)
+  ellipse(width/3, height/3 + 100, 100, 50+bass)
+  ellipse(width/2.6, height/3.2 + 100, 100, 50+bass)
+  ellipse(width/4, height/3.1 + 100, 100, 50+bass)
+  ellipse(width/3.4, height/3.4 + 100, 100, 50+bass)
+  ellipse(width/3.1, height/3.6 + 100, 100, 50+bass)
+  pop();
+  
 
-  // fill('#008000')
-  // rect(width/3, height/2, 50+ bass, 50 +bass)
-  // rect(width/3*2, height/2, 50+ bass, 50 +bass) 
+  fill(255)
+  push();
+  translate (-80,100);
+  ellipse(width/4, height/3 + 100, 100, 50+bass)
+  ellipse(width/3, height/3 + 100, 100, 50+bass)
+  ellipse(width/2.5, height/3 + 100, 100, 50+bass)
+  ellipse(width/2.6, height/3.4 + 100, 100, 50+bass)
+  ellipse(width/3.4, height/3.4 + 100, 100, 50+bass)
+  ellipse(width/3, height/3.8 + 100, 100, 50+bass)
+  pop();
+
+  fill(255)
+  push();
+  translate (180,-180);
+  ellipse(width/4, height/3 + 100, 100, 50+bass)
+  ellipse(width/3, height/3 + 100, 100, 50+bass)
+  ellipse(width/2.5, height/3 + 100, 100, 50+bass)
+  ellipse(width/2.6, height/3.4 + 100, 100, 50+bass)
+  ellipse(width/3.6, height/3.4 + 100, 100, 50+bass)
+  ellipse(width/3.1, height/3.6 + 100, 100, 50+bass)
+  pop();
+
+
+
+
   
   // fill(255)
   // ellipse(width/2, height/2 + 200, 200, 50+vocal)
@@ -138,7 +176,7 @@ pop();
   //   var drumHight = map(drum, -50,100, height,0*ballSize/2);
 
   //   fill(235, 52, 52);
-  //   ellipse(width/2, drumHight, ballSize);
+  //   ellipse(width/5, drumHight, ballSize);
 
 
 
@@ -239,52 +277,91 @@ textFont('Georgia'); // please use CSS safe fonts
 
     var drumHight = map(other, -150,100, height,0*ballSize/9);
 
-    
-    fill(235, 152, 52);
+    //bird
+    push ();
+    translate (700,80);
+    scale(0.5);
+    fill(41, 38, 145);
     stroke(255, 140, 148);
     strokeWeight(0);
-    ellipse(width/6, drumHight+10, ballSize);
-    ellipse(width/4.5, drumHight+10, ballSize);
-    ellipse(width/3.5, drumHight+10, ballSize);
-    ellipse(width/2, drumHight+10, ballSize);
-    ellipse(width/1.6, drumHight+10, ballSize);
-    ellipse(width/1.5, drumHight+10, ballSize);
-    ellipse(width/1.4, drumHight+10, ballSize);
-    ellipse(width/1.3, drumHight+10, ballSize);
-    ellipse(width/1.2, drumHight+10, ballSize);
-    ellipse(width/1, drumHight+10, ballSize);
+    ellipse(140, drumHight+150, 120);
+    ellipse(220, drumHight+110, 80);
+    triangle(20, drumHight+100, 20, drumHight+200, 100, drumHight+150);
+    
+
+    fill(235, 152, 52);
+    stroke(255, 140, 148);
+    triangle(250, drumHight+90, 260, drumHight+120, 300, drumHight+90);
 
 
+    fill(255);
+    stroke(255, 140, 148);
+    ellipse(230, drumHight+100, 15);
 
 
+    pop();
+
+    
 
 
-   
+    if(counter < 100 || counter > 1000 ) {
 
     // colour changing sun 
-    let colorVariable = 0; // Variable to control the gradient color
+    
 
+    let myYellow = color(255, 255, 0);
+    let myOrange = color(252, 80, 61);
+    // let myY = color(255, 255, 0);
+    // let myO = color(255, 165, 0);
   
-  // Map the colorVariable to a gradient between yellow (color(255, 255, 0)) and orange (color(255, 165, 0))
-  let lerpedColor = lerpColor(color(255, 255, 0), color(255, 165, 0), colorVariable);
-
-  fill(lerpedColor);
-  noStroke();
   
   // Draw an ellipse in the center of the canvas
-  let diameter = 100;
-  ellipse(width / 2, height / 2, diameter, diameter);
-
-  // Change the color gradually
-  colorVariable += 0.005;
-  if (colorVariable > 1) {
-    colorVariable = 0;
+  let diameter = 150;
+  
+  for(let i = 1; i <= diameter; i++){
+    // Map the colorVariable to a gradient between yellow (color(255, 255, 0)) and orange (color(255, 165, 0))
+    let colorVariable = map(i, 0, diameter, 0, 1); // Variable to control the gradient color
+    let lerpedColor = lerpColor(myOrange, myYellow, colorVariable);
+    // console.log(lerpedColor);
+    noFill();
+    stroke(lerpedColor);
+    strokeWeight(1);
+    ellipse(width / 5, height / 4, i, i);
   }
 
+  noStroke();
+
+  // Change the color gradually
+  // colorVariable += 0.005;
+  // if (colorVariable > 1) {
+  //   colorVariable = 0;
+  // }
+}
+  else 
+ {
+  let myBlue = color(32, 106, 245);
+  let myPurple = color(91, 12, 156);
+  // let myY = color(255, 255, 0);
+  // let myO = color(255, 165, 0);
 
 
+// Draw an ellipse in the center of the canvas
+let diameter = 150;
 
+for(let i = 1; i <= diameter; i++){
+  // Map the colorVariable to a gradient between yellow (color(255, 255, 0)) and orange (color(255, 165, 0))
+  let colorVariable = map(i, 0, diameter, 0, 1); // Variable to control the gradient color
+  let lerpedColor = lerpColor(myPurple, myBlue, colorVariable);
+  // console.log(lerpedColor);
+  noFill();
+  stroke(lerpedColor);
+  strokeWeight(1);
+  ellipse(width / 5, height / 4, i, i);
+}
 
+noStroke();
+}
 
 }
+
 
