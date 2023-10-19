@@ -277,10 +277,12 @@ textFont('Georgia'); // please use CSS safe fonts
 
     var drumHight = map(other, -150,100, height,0*ballSize/9);
 
+    if(counter < 100 || counter > 1000 ) {
+
     //bird
     push ();
     translate (700,80);
-    scale(0.5);
+    scale(0.6);
     fill(41, 38, 145);
     stroke(255, 140, 148);
     strokeWeight(0);
@@ -298,9 +300,11 @@ textFont('Georgia'); // please use CSS safe fonts
     stroke(255, 140, 148);
     ellipse(230, drumHight+100, 15);
 
-
     pop();
+    }
 
+    else {   
+    }
     
 
 
