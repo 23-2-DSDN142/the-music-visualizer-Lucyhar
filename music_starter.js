@@ -1,4 +1,3 @@
-
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   //colorMode(HSB, 100);
@@ -8,32 +7,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
 console.log(counter);
 
-// }
 
-  // console.log(vocal);
-
-  //   testing loop code
-
-  // storkeFill(255);
-
-  // var drumMap = map(drum, 0,100, 5,70); //parseInt
-
-  // if(bass<=20){
-  //   vocalMap = map(vocal, 0,20, 20,40);
-  // }
-  // else{
-  //   vocalMap = map(vocal, 20, 100, 40, 200);
-  // }
-
-  // var lengthOfLine = 300;
-  // var LineStart = 100;
-  // var lineEnd = LineStart+lengthOfLine;
-  // // let strokeColour = lerpColour();
-  // stroke(drumMap,100,100);
-
-  // for(var i = 0; i <= drumMap; i++){
-  //   var lineStep = i*20;
-  //   line(LineStart, lineStep, lineEnd, lineStep);
 
   if(counter < 3040 || counter > 5090 ) {
 
@@ -114,12 +88,7 @@ ellipse(width / 500, height / 650, i, i);
 
 pop();
 
-// if(words>=20){
-//     vocalMap = map(vocal, 0,20, 20,40);
-//   }
-//   else{
-//     vocalMap = map(vocal, 20, 100, 40, 200);
-//   }
+
 
   }
 
@@ -162,26 +131,6 @@ pop();
   ellipse(width/3.1, height/3.6 + 100, 100, 50+bass)
   pop();
 
-
-
-
-  
-  // fill(255)
-  // ellipse(width/2, height/2 + 200, 200, 50+vocal)
-
-  // fill('#FFC0CB')
-  // ellipse(width/2, height/2 + 200, 120, 20+vocal)
-
-  //   var ballSize = map(bass, 0,50, 40,150);
-
-  //   var drumHight = map(drum, -50,100, height,0*ballSize/2);
-
-  //   fill(235, 52, 52);
-  //   ellipse(width/5, drumHight, ballSize);
-
-
-
-
     
 
 textFont('Georgia'); // please use CSS safe fonts
@@ -191,30 +140,6 @@ textFont('Georgia'); // please use CSS safe fonts
    let bar_height = width / 12;
    let bar_pos_x = width / 2;
  
-
-  //  // vocal bar is red
-  //  fill(200, 0, 0);
-  //  rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
-  //  fill(0);
-  //  text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
- 
-  //  // drum bar is green
-  //  fill(0, 200, 0);
-  //  rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-  //  fill(0);
-  //  text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
- 
-  //  // bass bar is blue
-  //  fill(50, 50, 240);
-  //  rect(bar_pos_x, height / 2 + 3 * bar_spacing, 4 * bass, bar_height);
-  //  fill(0);
-  //  text("bass", bar_pos_x, height / 2 + 3 * bar_spacing + 8);
- 
-  //  // other bar is white
-  //  fill(200, 200, 200);
-  //  rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
-  //  fill(0);
-  //  text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
    fill(255, 255, 0);
  
    // display "words"
@@ -261,18 +186,7 @@ textFont('Georgia'); // please use CSS safe fonts
   rect(width/2, height/2, 800+ drum, 760  +drum)
 
   fill('#008000')
-  // rect(width/3, height/2, 50+ bass, 50 +bass)
-  // rect(width/3*2, height/2, 50+ bass, 50 +bass) 
-  
  
-
-  
-
-  // fill(255)
-  // ellipse(width/2, height/2 + 200, 200, 50+vocal)
-
-  // fill('colorVariable')
-  // ellipse(width/2, height/2 + 200, 120, 20+vocal)
 
     var ballSize = map(bass, 0,50, 40,50);
 
@@ -283,28 +197,27 @@ textFont('Georgia'); // please use CSS safe fonts
     else { 
 
 
-      background(1, 32, 97); //dark blue 
+      background(70, 77, 119); //greyish 
 
       for(var i = 1; i <= 5; i++){
         // console.log("ENTERED");
         let flower_size = bass + 50 ;
       //basic white flower
-  // var flowerMap = map(drum, 0,100, 5,70); //parseInt
   
 
   push();
   
   
   translate(160*i, 630);
-  stroke(5, 51, 5); // dark green
+  stroke('#57A773'); // light green
   strokeWeight(2);
   
-  stroke(5, 51, 5); // dark green
+  stroke('#57A773'); // light green
   strokeWeight(5);
   line(10,15,10,300);
   
   rotate(-20);
-  fill(5, 51, 5); // dark green
+  fill('#57A773'); // light green
   ellipse(30, 0, 55,15); // leaf4
   rotate(-30);
   ellipse(30, 0, 45,12); // leaf
@@ -314,10 +227,10 @@ textFont('Georgia'); // please use CSS safe fonts
   stroke(255, 140, 148); //no show
   strokeWeight(0);
   if (flower_size > 50){
-  fill(81, 3, 163)//dark purple
+  fill(19, 3, 163)//dark purple
   }
   else {
-  fill(3, 27, 163)//blue
+  fill(108, 150, 157)//blue
   }
   
   rotate(85);
@@ -363,99 +276,10 @@ textFont('Georgia'); // please use CSS safe fonts
   
   pop();
   
-  // if(words>=20){
-  //     vocalMap = map(vocal, 0,20, 20,40);
-  //   }
-  //   else{
-  //     vocalMap = map(vocal, 20, 100, 40, 200);
-  //   }
+ 
   
     }
-  
-  
-  
-  //clouds
-  
     
-    fill(255, 208, 0)
-    push();
-    scale(0.3)
-    translate (1000,500);
-    ellipse(width/2, height/5 , 100, 50+bass)
-    ellipse(width/6, height/5 , 100, 50+bass)
-    ellipse(width*1, height/5 , 100, 50+bass)
-    ellipse(width+1, height+5 , 100, 50+bass)
-    ellipse(width+8, height+3 , 100, 50+bass)
-    ellipse(width+1, height+3 , 100, 50+bass)
-    ellipse(width+3, height+2 , 100, 50+bass)
-    ellipse(width+10, height+10 , 100, 50+bass)
-    ellipse(width+7, height+8 , 100, 50+bass)
-    ellipse(width+5, height+3 , 100, 50+bass)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // ellipse(width/4, height/3 + 100, 100, 50+bass)
-    // ellipse(width/6, height/3 + 100, 100, 50+bass)
-    // ellipse(width/8, height/3 + 100, 100, 50+bass)
-    // ellipse(width/10, 3 + 100, 100, 50+bass)
-    // ellipse(width/12, height/3 + 100, 100, 50+bass)
-    // ellipse(width/7, height/4 + 100, 100, 50+bass)
-    // ellipse(width/8, height/3 + 100, 100, 50+bass)
-    // ellipse(width/9, height/2 + 100, 100, 50+bass)
-    // ellipse(width/10, height/1 + 100, 100, 50+bass)
-    pop();
-    
-  
-    fill(255, 208, 0)
-    push();
-    scale(0.3)
-    translate (800,100);
-    ellipse(width/4, height+2 , 100, 50+bass)
-    ellipse(width+4, height+4 , 100, 50+bass)
-    ellipse(width+8, height+4 , 100, 50+bass)
-
-
-    // ellipse(width/6, height/3 , 100, 50+bass)
-    // ellipse(width/5, height/3 , 100, 50+bass)
-    // ellipse(width/9, height/3.4, 100, 50+bass)
-    // ellipse(width/2, height/3 , 100, 50+bass)
-    // ellipse(width/3, height/3.8 , 100, 50+bass)
-    pop();
-  
-  
-  
-  
-  
-  
-    
-    // fill(255)
-    // ellipse(width/2, height/2 + 200, 200, 50+vocal)
-  
-    // fill('#FFC0CB')
-    // ellipse(width/2, height/2 + 200, 120, 20+vocal)
-  
-    //   var ballSize = map(bass, 0,50, 40,150);
-  
-    //   var drumHight = map(drum, -50,100, height,0*ballSize/2);
-  
-    //   fill(235, 52, 52);
-    //   ellipse(width/5, drumHight, ballSize);
-  
-  
-  
-  
-      
   
   textFont('Georgia'); // please use CSS safe fonts
     textSize(24);
@@ -465,29 +289,7 @@ textFont('Georgia'); // please use CSS safe fonts
      let bar_pos_x = width / 2;
    
   
-    //  // vocal bar is red
-    //  fill(200, 0, 0);
-    //  rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
-    //  fill(0);
-    //  text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
-   
-    //  // drum bar is green
-    //  fill(0, 200, 0);
-    //  rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-    //  fill(0);
-    //  text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
-   
-    //  // bass bar is blue
-    //  fill(50, 50, 240);
-    //  rect(bar_pos_x, height / 2 + 3 * bar_spacing, 4 * bass, bar_height);
-    //  fill(0);
-    //  text("bass", bar_pos_x, height / 2 + 3 * bar_spacing + 8);
-   
-    //  // other bar is white
-    //  fill(200, 200, 200);
-    //  rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
-    //  fill(0);
-    //  text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
+  
      fill(255,);
    
      // display "words"
@@ -499,10 +301,10 @@ textFont('Georgia'); // please use CSS safe fonts
   
   
   
-    // testing background picture
+    //  background picture
   
-    fill('#3CB043')
-    stroke(19, 33, 5); //dark green grass
+    fill('#053225'); //dark green grass
+    stroke('#053225'); // no show 
     strokeWeight(0);
     triangle(50, 900, 150, 800, 200, 900);
   
@@ -523,12 +325,12 @@ textFont('Georgia'); // please use CSS safe fonts
     triangle(800, 900, 880, 800, 1000, 900);
   
     fill(255)
-    stroke(124, 31, 255);//purple boarder
+    stroke(1, 18, 48);//purple boarder
     strokeWeight(90);
     noFill();
     rect(width/2, height/2, 900+ drum, 860  +drum)
     
-    stroke(2, 12, 64); //dark blue boarder
+    stroke(76, 96, 133); //dark blue boarder
     strokeWeight(15);
     noFill();
     rect(width/2, height/2, 800+ drum, 760  +drum)
@@ -569,11 +371,7 @@ textFont('Georgia'); // please use CSS safe fonts
 
   noStroke();
 
-  // Change the color gradually
-  // colorVariable += 0.005;
-  // if (colorVariable > 1) {
-  //   colorVariable = 0;
-  // }
+ 
 }
   else 
  {
