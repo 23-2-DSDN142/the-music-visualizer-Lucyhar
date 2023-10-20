@@ -450,7 +450,7 @@ if(counter < 4080 || counter > 5090 ) {
     ellipse(160, drumHight+130, 15);
   
   
-    fill(1, 32, 97);
+    fill(70, 77, 119);
     stroke(255, 208, 0);
     strokeWeight(5);
     ellipse(140, drumHight+50,100,50, 120);    
